@@ -23,16 +23,12 @@ library(devtools)
 #2. Import data
 # Change the directories for your data
 ```{r}
-GSE146771_CRC_Leukocyte_10x_Metadata<- read.csv("/Users/rxk519/Desktop/Projects/CRC_Project/CRC_datasets_GSE146771/GSE146771_CRC.Leukocyte.10x.Metadata.txt", sep = "\t")
+GSE146771_CRC_Leukocyte_10x_Metadata<- read.csv("/data/GSE146771_CRC.Leukocyte.10x.Metadata.txt", sep = "\t")
 vec.cell.type <- GSE146771_CRC_Leukocyte_10x_Metadata$CellName
 names(vec.cell.type) <- GSE146771_CRC_Leukocyte_10x_Metadata$Global_Cluster
 
-#counts
-#GSE146771_CRC_Leukocyte_10x_TPM<- read.table("/Users/rxk519/Desktop/Projects/CRC_Project/CRC_datasets_GSE146771/GSE146771_CRC.Leukocyte.10x.TPM.txt", fill = TRUE, header = TRUE, sep = "")
-#saveRDS(GSE146771_CRC_Leukocyte_10x_TPM, file = "/Users/rxk519/Desktop/Projects/CRC_Project/CRC_datasets_GSE146771/data/GSE146771_CRC_Leukocyte_10x_TPM.rds")
 
-
-GSE146771_CRC_Leukocyte_10x_TPM<-readRDS("/Users/rxk519/Desktop/Projects/CRC_Project/CRC_datasets_GSE146771/data/GSE146771_CRC_Leukocyte_10x_TPM.rds")
+GSE146771_CRC_Leukocyte_10x_TPM<-readRDS("/data/GSE146771_CRC_Leukocyte_10x_TPM.rds")
 ```
 
 #3.create a seurat project
